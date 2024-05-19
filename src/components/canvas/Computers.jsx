@@ -1,30 +1,28 @@
 import { Suspense, useEffect, useState } from "react";
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
-import { Mesh } from "three";
-// import { Mesh } from "@react-three/fiber";
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, isTablet }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   return (
     <mesh>
       <hemisphereLight intensity={1} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 40]}
+        position={[-30, 60, 40]}
         angle={0.12}
         penumbra={1}
         intensity={2}
         castShadow
-        shadowMapSize={1024} // Corrected attribute name
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75}
-        position={isMobile ? [0, -1.4, -2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.3 : isTablet ? 0.4 : 0.75}
+        position={isMobile ? [0, -1,-0.3] : isTablet ? [0, -2.5, -0.7] : [0, -4, -1.5]}
+        rotation={[-0.01, -0.3, -0.3]}
       />
     </mesh>
   );
@@ -32,24 +30,34 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    // Add a Listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    // Add listeners for changes to the screen size
+    const mobileQuery = window.matchMedia("(max-width: 500px)");
+    const tabletQuery = window.matchMedia("(min-width: 501px) and (max-width: 1024px)");
 
-    setIsMobile(mediaQuery.matches);
+    // Set the initial values for the `isMobile` and `isTablet` state variables
+    setIsMobile(mobileQuery.matches);
+    setIsTablet(tabletQuery.matches);
 
-    // Set the initial value of the `isMobile` state variable
-    const handleMediaQueryChange = (event) => {
+    // Define callback functions to handle changes to the media queries
+    const handleMobileQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Define a callback function to handle
-    // changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    // Remove the listener when the component is unmounted
+    const handleTabletQueryChange = (event) => {
+      setIsTablet(event.matches);
+    };
+
+    // Attach the listeners to the media queries
+    mobileQuery.addEventListener("change", handleMobileQueryChange);
+    tabletQuery.addEventListener("change", handleTabletQueryChange);
+
+    // Remove the listeners when the component is unmounted
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      mobileQuery.removeEventListener("change", handleMobileQueryChange);
+      tabletQuery.removeEventListener("change", handleTabletQueryChange);
     };
   }, []);
 
@@ -58,15 +66,15 @@ const ComputersCanvas = () => {
       frameLoop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserverDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI}
+          minPolarAngle={0}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} isTablet={isTablet} />
       </Suspense>
       <Preload all />
     </Canvas>
