@@ -15,13 +15,8 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    clearview,
+    article,
     threejs,
   } from "../assets";
   
@@ -219,9 +214,9 @@ import {
       source_code_link: "https://github.com/pritamkumar143/ClearView",
     },
     {
-      name: "Job IT",
+      name: "Article Summarizer",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "An innovative Article Summarizer Application built with ReactJS and Vite, featuring a sleek UI with glass morphism using Tailwind CSS. Leveraging advanced RTK Query for API requests, local storage for history, and seamless form handling, users can effortlessly summarize articles, copy to clipboard, and enjoy a clean, error-handled experience. Dive into the future of content consumption with this powerful tool! 🚀",
       tags: [
         {
           name: "react",
@@ -232,33 +227,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "tailwind",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: article,
+      source_code_link: "https://github.com/pritamkumar143/Articel-Summarize",
     },
   ];
   

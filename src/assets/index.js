@@ -27,8 +27,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import clearview from './clearview.jpg'
-import openai from "./openai.jpg";
-import tripguide from "./tripguide.png";
+import article from "./openai.jpg";
 
 export {
   logo,
@@ -57,6 +56,5 @@ export {
   starbucks,
   tesla,
   clearview,
-  openai,
-  tripguide,
+  article,
 };
