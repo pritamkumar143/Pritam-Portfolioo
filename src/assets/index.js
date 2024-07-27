@@ -26,8 +26,8 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import clearview from './clearview.jpg'
-import livedocs from './livedocs.png'
+import clearview from './clearview.jpg';
+import livedocs from './livedocs.png';
 import article from "./openai.jpg";
 
 export {
@@ -57,5 +57,6 @@ export {
   starbucks,
   tesla,
   clearview,
+  livedocs,
   article,
 };
