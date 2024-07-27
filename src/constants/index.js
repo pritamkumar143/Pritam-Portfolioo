@@ -236,6 +236,27 @@ import {
       source_code_link: "https://github.com/pritamkumar143/pritam-live-docs",
     },
     {
+      name: "LiveDocs",
+      description:
+        "LiveDocs is an advanced real-time collaborative document editing application designed to handle millions of collaborators simultaneously. Built with Next.js, TypeScript, and Tailwind CSS, it ensures a seamless user experience with robust performance and scalability.",
+      tags: [
+        {
+          name: "next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Modern UI",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: livedocs,
+      source_code_link: "https://github.com/pritamkumar143/pritam-live-docs",
+    },
+    {
       name: "Article Summarizer",
       description:
         "An innovative Article Summarizer Application built with ReactJS and Vite, featuring a sleek UI with glass morphism using Tailwind CSS. Leveraging advanced RTK Query for API requests, local storage for history, and seamless form handling, users can effortlessly summarize articles, copy to clipboard, and enjoy a clean, error-handled experience. Dive into the future of content consumption with this powerful tool! 🚀",
