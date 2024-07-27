@@ -213,6 +213,27 @@ import {
       image: clearview,
       source_code_link: "https://github.com/pritamkumar143/ClearView",
     },
+      {
+      name: "LiveDocs",
+      description:
+        "LiveDocs is an advanced real-time collaborative document editing application designed to handle millions of collaborators simultaneously. Built with Next.js, TypeScript, and Tailwind CSS, it ensures a seamless user experience with robust performance and scalability.",
+      tags: [
+        {
+          name: "next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Modern UI",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: clearview,
+      source_code_link: "https://github.com/pritamkumar143/pritam-live-docs",
+    },
     {
       name: "Article Summarizer",
       description:
