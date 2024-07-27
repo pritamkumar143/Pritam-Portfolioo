@@ -16,6 +16,7 @@ import {
     figma,
     docker,
     clearview,
+    livedocs,
     article,
     threejs,
   } from "../assets";
@@ -231,7 +232,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: clearview,
+      image: livedocs,
       source_code_link: "https://github.com/pritamkumar143/pritam-live-docs",
     },
     {
