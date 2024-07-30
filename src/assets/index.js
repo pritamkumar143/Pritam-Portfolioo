@@ -28,6 +28,7 @@ import tesla from "./company/tesla.png";
 
 import clearview from './clearview.jpg';
 import livedocs from './livedocs.png';
+import nike from './nike.png';
 import article from "./openai.jpg";
 
 export {
@@ -59,4 +60,5 @@ export {
   clearview,
   livedocs,
   article,
+  nike,
 };
