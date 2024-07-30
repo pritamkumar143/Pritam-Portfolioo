@@ -18,6 +18,7 @@ import {
   clearview,
   livedocs,
   article,
+  nike,
   threejs,
 } from "../assets";
 
@@ -255,6 +256,23 @@ const projects = [
     ],
     image: article,
     source_code_link: "https://github.com/pritamkumar143/Articel-Summarize",
+  },
+  {
+    name: "Nike Landing Page",
+    description:
+      "This project showcases the creation of a stylish and responsive Nike landing page using React for the frontend framework and Tailwind CSS for utility-first CSS styling. The landing page aims to highlight the latest Nike products with a modern and attractive design.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nike,
+    source_code_link: "https://github.com/pritamkumar143/Nike-Landing-Page",
   },
 ];
 
