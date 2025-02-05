@@ -35,6 +35,11 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Download Resume",
+    link: "https://drive.google.com/file/d/1sdzfyCUjrH0kJOsC8FS0SmvA4tWmnEpX/view?usp=sharing",
+  },
 ];
 
 const services = [
@@ -214,6 +219,7 @@ const projects = [
     ],
     image: clearview,
     source_code_link: "https://github.com/pritamkumar143/ClearView",
+    live_demo_link: "https://p-clear-view.vercel.app/", // Add Live Demo link
   },
   {
     name: "LiveDocs",
@@ -235,6 +241,8 @@ const projects = [
     ],
     image: livedocs,
     source_code_link: "https://github.com/pritamkumar143/pritam-live-docs",
+    live_demo_link: "https://pritam-live-docs.vercel.app", // Add Live Demo link
+
   },
   {
     name: "Article Summarizer",
@@ -256,6 +264,8 @@ const projects = [
     ],
     image: article,
     source_code_link: "https://github.com/pritamkumar143/Articel-Summarize",
+    live_demo_link: "https://articel-summarize.vercel.app/", // Add Live Demo link
+
   },
   {
     name: "Nike Landing Page",
@@ -273,6 +283,8 @@ const projects = [
     ],
     image: nike,
     source_code_link: "https://github.com/pritamkumar143/Nike-Landing-Page",
+    live_demo_link: "https://nike-landing-page-green.vercel.app/", // Add Live Demo link
+
   },
 ];
 
